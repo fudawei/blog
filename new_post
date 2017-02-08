@@ -1,0 +1,34 @@
+#!/bin/bash
+
+function echo_red_string()
+{
+    echo -e "\033[31m ERROR: $1 \033[0m"
+}
+
+function echo_green_string()
+{
+    echo -e "\033[32m INFO: $1 \033[0m"
+}
+
+function new_post()
+{
+    if [ $# -lt 1 ]; then
+        echo_red_string "Please input post name."
+        exit
+    fi
+    echo_green_string "Ready create post: "$1
+    file_name=`hexo new "$1" | awk '{print $3}' | xargs basename`
+    echo_green_string "Created file name: "$file_name
+    title=`sed -n '1p' /Users/qifuguang/hexo/source/_posts/$file_name | awk '{print $2}'`
+    echo_green_string "Title: "$title
+    tmp_date=`sed -n '4p' /Users/qifuguang/hexo/source/_posts/$file_name | awk '{print $2}'`
+    date=`echo $tmp_date | sed 's/-/\//g'`
+    echo_green_string "Date: $date"
+    cat >> /Users/qifuguang/hexo/source/_posts/$file_name << EOF
+# 声明
+本文为作者原创，转载请注明出处，否则将追究法律责任，本文链接：[http://fudawei.github.io/$date/$title](http://fudawei.github.io/$date/$title)
+EOF
+    /Applications/Mou.app/Contents/MacOS/Mou /Users/qifuguang/hexo/source/_posts/$file_name
+}
+
+new_post $1
