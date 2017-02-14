@@ -1,5 +1,5 @@
 title: Java 并发编程：volatile的使用及其原理
-date: 2017-02-05 15:14:22
+date: 2017-02-08 22:14:22
 categories: [Java,多线程]
 tags: [多线程]
 ---
@@ -235,7 +235,7 @@ volatile是无法保证这三个操作是具有原子性的，我们可以通过
 3、内存屏障
 
 　　为了实现volatile可见性和happen-befor的语义。JVM底层是通过一个叫做“内存屏障”的东西来完成。内存屏障，也叫做内存栅栏，是一组处理器指令，用于实现对内存操作的顺序限制。下面是完成上述规则所要求的内存屏障：
-    ![](/img/volatile/volatile-1.png)
+    ![](/img/volatile/volatile-2.png)
 （1）LoadLoad 屏障
 执行顺序：Load1—>Loadload—>Load2
 确保Load2及后续Load指令加载数据之前能访问到Load1加载的数据。
