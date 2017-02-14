@@ -1,6 +1,6 @@
 title: Shell--Awk
-tags: [linux shell]
-categories: [linux shell]
+tags: [Linux,Shell]
+categories: [Linux,Shell]
 date: 2017-01-22 10:30:02
 ---
 

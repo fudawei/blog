@@ -1,6 +1,6 @@
 title: Shell--Expect
-tags: [linux shell]
-categories: [linux shell]
+tags: [Linux,Shell]
+categories: [Linux,Shell]
 date: 2017-01-24 10:30:02
 ---
 

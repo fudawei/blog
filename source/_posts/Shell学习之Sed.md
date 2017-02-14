@@ -1,6 +1,6 @@
 title: Shell--Sed
-tags: [linux shell]
-categories: [linux shell]
+tags: [Linux,Shell]
+categories: [Linux,Shell]
 date: 2017-01-23 16:07:02
 ---
 

@@ -1,6 +1,6 @@
 title: Shell特殊字符简介
-tags: [linux shell]
-categories: [linux shell]
+tags: [Linux,Shell]
+categories: [Linux,Shell]
 date: 2015-09-23 00:07:02
 ---
 # 概述

@@ -1,6 +1,6 @@
-title: Synchronized实现原理以及底层优化
-tags: [Java]
-categories: [内置锁]
+title: Java 并发编程：Synchronized实现原理以及底层优化
+tags: [内置锁]
+categories: [Java,多线程]
 date: 2017-2-7 10:30:02
 ---
 

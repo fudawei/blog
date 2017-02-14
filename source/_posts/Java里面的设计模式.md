@@ -1,7 +1,7 @@
 title: Java里面的设计模式
 date: 2014-04-15 22:08:33
-categories: [Java,设计模式]
-tags: [Java,设计模式]
+categories: [设计模式]
+tags: [设计模式]
 ---
 ###Structural（结构模式）
 #### Adapter:

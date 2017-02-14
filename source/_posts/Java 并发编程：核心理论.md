@@ -1,6 +1,6 @@
 title: Java 并发编程：核心理论
 date: 2017-02-05 15:14:22
-categories: [Java,Java基础]
+categories: [Java,多线程]
 tags: [多线程]
 ---
 

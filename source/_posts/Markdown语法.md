@@ -1,7 +1,7 @@
 title: Markdown语法
 date: 2016-01-17 22:37:19
-categories: [markdown]
-tags: [markdown]
+categories: [MarkDown]
+tags: [MarkDown]
 ---
 ```
 * hello world           *代表项目编号

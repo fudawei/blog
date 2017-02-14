@@ -1,8 +1,8 @@
 ﻿---
 title: Java注解
 date: 2013-08-07 13:20:39
-tags: [Java,注解]
-categories: [Java,注解]
+tags: [注解]
+categories: [Java,Java基础]
 ---
 
 ### 什么是注解

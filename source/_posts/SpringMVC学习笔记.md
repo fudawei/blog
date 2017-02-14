@@ -1,6 +1,6 @@
 title: SpringMVC学习笔记
 date: 2014-02-09 22:31:05
-categories: [Java,JavaEE框架]
+categories: [JavaEE框架]
 tags: [springMVC]
 ---
 ### SpringMVC

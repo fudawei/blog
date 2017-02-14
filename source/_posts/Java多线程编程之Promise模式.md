@@ -1,6 +1,6 @@
 title: "Java多线程编程之Promise模式"
-tags: [Java,并发编程]
-categories: [Java,并发编程]
+tags: [Java,多线程]
+categories: [Java,多线程]
 date: 2016-11-24 22:42:01
 ---
 

@@ -1,14 +1,14 @@
-﻿---
+---
 title: Java圾收集机制
 date: 2014-07-23 22:57:23
-tags: [Java,GC]
-categories: [Java,GC]
+tags: [JVM,GC]
+categories: [Java,JVM]
 ---
 
 ### 对象引用###
 
  Java中的垃圾回收一般是在Java堆中进行，因为堆中几乎存放了Java中所有的对象实例。谈到Java堆中的垃圾回收，自然要谈到引用。在JDK1.2之前，Java中的引用定义很很纯粹：如果reference类型的数据中存储的数值代表的是另外一块内存的起始地址，就称这块内存代表着一个引用。但在JDK1.2之后，Java对引用的概念进行了扩充，将其分为__强引用（Strong Reference）、软引用（Soft Reference）、弱引用（Weak Reference）、虚引用（Phantom Reference）四种__，引用强度依次减弱
- 
+
 - __强引用：__如“Object obj = new Object（）”，这类引用是Java程序中最普遍的。只要强引用还存在，垃圾收集器就永远不会回收掉被引用的对象
 
 - __软引用：__它用来描述一些可能还有用，但并非必须的对象。在系统内存不够用时，这类引用关联的对象将被垃圾收集器回收。JDK1.2之后提供了SoftReference类来实现软引用
