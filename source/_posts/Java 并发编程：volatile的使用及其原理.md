@@ -255,35 +255,33 @@ volatile是无法保证这三个操作是具有原子性的，我们可以通过
 最后我可以通过一个实例来说明一下JVM中是如何插入内存屏障的：
 
 ```
-package com.ellis.concurrent;
-
-public class MemoryBarrier {
-    int a, b;
-    volatile int v, u;
-
-    void f() {
-        int i, j;
-
-        i = a;
-        j = b;
-        i = v;
-        //LoadLoad
-        j = u;
-        //LoadStore
-        a = i;
-        b = j;
-        //StoreStore
-        v = i;
-        //StoreStore
-        u = j;
-        //StoreLoad
-        i = u;
-        //LoadLoad
-        //LoadStore
-        j = b;
-        a = i;
-    }
-}
+class X {  
+    int a, b;  
+    volatile int v, u;  
+  
+    void f() {  
+        int i, j;  
+  
+        i = a;// load a  
+        j = b;// load b  
+        i = v;// load v  
+        // LoadLoad  
+        j = u;// load u  
+        // LoadStore  
+        a = i;// store a  
+        b = j;// store b  
+        // StoreStore  
+        v = i;// store v  
+        // StoreStore  
+        u = j;// store u  
+        // StoreLoad  
+        i = u;// load u  
+        // LoadLoad  
+        // LoadStore  
+        j = b;// load b  
+        a = i;// store a  
+    }  
+}  
 ```
 
 # 四、总结
@@ -293,4 +291,10 @@ public class MemoryBarrier {
 　　（1）对变量的写操作不依赖于当前值。
 
 　　（2）该变量没有包含在具有其他变量的不变式中。
+
+
+
+## [Java 理论与实践: 正确使用 Volatile 变量][core]
+
+[core]: https://fudawei.github.io/2017/02/05/Java%20%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%EF%BC%9A%E6%A0%B8%E5%BF%83%E7%90%86%E8%AE%BA/ "Java 理论与实践: 正确使用 Volatile 变量"
 
